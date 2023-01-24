@@ -7,7 +7,7 @@ namespace InformationManagement.Contracts.Person
         OperationResult Create(CreatePerson Cmd);
         OperationResult Edit(EditPerson Cmd);
         EditPerson GetDetails(long id);
-        List<PersonViewModel> GetAll();
+        List<PersonViewModel> GetList();
     }
 
 }

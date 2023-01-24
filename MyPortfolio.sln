@@ -25,7 +25,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InformationManagement.Appli
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InformationMangement.Infrastructure.EfCore", "InformationMangement.Infrastructure.EfCore\InformationMangement.Infrastructure.EfCore.csproj", "{9AE14B96-92F9-408C-97B1-D9D3F8A050F8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InformationManagement.Configuration", "InformationManagement.Configuration\InformationManagement.Configuration.csproj", "{A9783283-CD3E-4EF1-AD33-2775CDCE27DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InformationManagement.Configuration", "InformationManagement.Configuration\InformationManagement.Configuration.csproj", "{A9783283-CD3E-4EF1-AD33-2775CDCE27DC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

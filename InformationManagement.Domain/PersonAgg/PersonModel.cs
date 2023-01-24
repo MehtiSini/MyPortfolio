@@ -17,8 +17,8 @@ namespace InformationManagement.Domain.PersonAgg
         public DateTime CreationDate { get; private set; }
 
 
-        public PersonModel(string? fullName, string? picturePath, string? email, string? mobile, string? shortDescription, 
-            bool isFreelancer, string? address, string? description)
+        public PersonModel(string? fullName, string? picturePath, string? email, string? mobile, string? shortDescription,
+            bool isFreelancer, string? address, string? description, string? pictureAlt)
         {
             FullName = fullName;
             PicturePath = picturePath;
@@ -29,9 +29,10 @@ namespace InformationManagement.Domain.PersonAgg
             Address = address;
             CreationDate = DateTime.Now;
             Description = description;
+            PictureAlt = pictureAlt;
         }
         public void Edit(string? fullName, string? picturePath, string? email, string? mobile, string? shortDescription,
-            bool isFreelancer, string? address, string? description)
+            bool isFreelancer, string? address, string? description, string? pictureAlt)
         {
             FullName = fullName;
             PicturePath = picturePath;
@@ -42,6 +43,7 @@ namespace InformationManagement.Domain.PersonAgg
             Address = address;
             CreationDate = DateTime.Now;
             Description = description;
+            PictureAlt = pictureAlt;
         }
     }
 }

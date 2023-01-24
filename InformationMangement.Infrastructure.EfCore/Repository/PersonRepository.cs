@@ -15,12 +15,13 @@ namespace InformationMangement.Infrastructure.EfCore.Repository
             _context = context;
         }
 
-        public List<PersonViewModel> GetAll()
+        public List<PersonViewModel> GetList()
         {
             return _context.Person.Select(x => new PersonViewModel
             {
                 Id = x.Id,
                 FullName = x.FullName,
+                PictureAlt= x.PictureAlt,
                 ShortDescription = x.ShortDescription,
                 IsFreelancer = x.IsFreelancer,
                 CreationDate = x.CreationDate.ToFarsi(),
@@ -38,13 +39,14 @@ namespace InformationMangement.Infrastructure.EfCore.Repository
                 Id = x.Id,
                 FullName = x.FullName,
                 ShortDescription = x.ShortDescription,
+                PictureAlt=x.PictureAlt,
+                Description=x.Description,
                 IsFreelancer = x.IsFreelancer,
                 Address = x.Address,
                 Email = x.Email,
-                Mobile = x.Mobile,
+                Mobile = x.Mobile
 
             }).FirstOrDefault(x => x.Id == id);
-
         }
     }
 }

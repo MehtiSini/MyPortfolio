@@ -23,7 +23,7 @@ namespace InformationManagement.Application.Person
             }
 
             var Person = new PersonModel(Cmd.FullName, "Picture", Cmd.Email, Cmd.Mobile, Cmd.ShortDescription,
-                Cmd.IsFreelancer, Cmd.Address, Cmd.Description);
+                Cmd.IsFreelancer, Cmd.Address, Cmd.Description , Cmd.PictureAlt);
 
             _personRepository.Create(Person);
 
@@ -49,16 +49,16 @@ namespace InformationManagement.Application.Person
             }
 
             Person.Edit(Cmd.FullName, "Picture", Cmd.Email, Cmd.Mobile, Cmd.ShortDescription,
-                Cmd.IsFreelancer, Cmd.Address, Cmd.Description);
+                Cmd.IsFreelancer, Cmd.Address, Cmd.Description, Cmd.PictureAlt);
 
             _personRepository.Save();
 
             return operation.Succeed();
         }
 
-        public List<PersonViewModel> GetAll()
+        public List<PersonViewModel> GetList()
         {
-            return _personRepository.GetAll();
+            return _personRepository.GetList();
         }
 
         public EditPerson GetDetails(long id)

@@ -7,11 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="Areas\Shared\_Layout.cshtml" />
-    <None Include="Areas\Shared\_ValidationScriptsPartial.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions" Version="7.0.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Analyzers" Version="7.0.2" />
