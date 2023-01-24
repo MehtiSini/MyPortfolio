@@ -6,7 +6,7 @@ namespace InformationManagement.Contracts.Person
     {
         public long Id { get; set; }
         public string? FullName { get; set; }
-        public IFormFile? PicturePath { get; set; }
+        public string? PicturePath { get; set; }
         public string? PictureAlt { get; set; }
         public string? Email { get; set; }
         public string? Mobile { get; set; }

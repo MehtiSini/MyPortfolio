@@ -1,6 +1,7 @@
 ﻿using Azure;
 using InformationManagement.Contracts.Person;
 using InformationManagement.Domain.PersonAgg;
+using MyFramework.Tools.FileUploader;
 using MyFramework.Tools.Operations;
 
 namespace InformationManagement.Application.Person
@@ -8,11 +9,12 @@ namespace InformationManagement.Application.Person
     public class PersonApplication : IPersonAppliaction
     {
         private readonly IPersonRepository _personRepository;
-        public PersonApplication(IPersonRepository personRepository)
+        private readonly IFileUploader _fileUploader;
+        public PersonApplication(IPersonRepository personRepository, IFileUploader fileUploader)
         {
             _personRepository = personRepository;
+            _fileUploader = fileUploader;
         }
-
         public OperationResult Create(CreatePerson Cmd)
         {
             var operation = new OperationResult();
@@ -22,8 +24,12 @@ namespace InformationManagement.Application.Person
                 return operation.Failed(OperationMessage.DuplicateRecord);
             }
 
-            var Person = new PersonModel(Cmd.FullName, "Picture", Cmd.Email, Cmd.Mobile, Cmd.ShortDescription,
-                Cmd.IsFreelancer, Cmd.Address, Cmd.Description , Cmd.PictureAlt);
+            var Name = Cmd.FullName.Trim().Split(' ')[0];
+
+            var PicturePath = _fileUploader.Upload(Cmd.PicturePath, Name);
+
+            var Person = new PersonModel(Cmd.FullName, PicturePath, Cmd.Email, Cmd.Mobile, Cmd.ShortDescription,
+                Cmd.IsFreelancer, Cmd.Address, Cmd.Description, Cmd.PictureAlt);
 
             _personRepository.Create(Person);
 
@@ -48,7 +54,11 @@ namespace InformationManagement.Application.Person
                 return operation.Failed(OperationMessage.DuplicateRecord);
             }
 
-            Person.Edit(Cmd.FullName, "Picture", Cmd.Email, Cmd.Mobile, Cmd.ShortDescription,
+            var Name = Cmd.FullName.Trim().Split(' ')[0];
+
+            var PicturePath = _fileUploader.Upload(Cmd.PicturePath, Name);
+
+            Person.Edit(Cmd.FullName, PicturePath, Cmd.Email, Cmd.Mobile, Cmd.ShortDescription,
                 Cmd.IsFreelancer, Cmd.Address, Cmd.Description, Cmd.PictureAlt);
 
             _personRepository.Save();

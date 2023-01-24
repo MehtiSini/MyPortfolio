@@ -27,4 +27,8 @@
     <ProjectReference Include="..\InformationManagement.Configuration\InformationManagement.Configuration.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\Photos\" />
+  </ItemGroup>
+
 </Project>
