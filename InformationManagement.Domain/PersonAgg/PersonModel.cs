@@ -1,4 +1,5 @@
-﻿using MyFramework.Domain;
+﻿using InformationManagement.Domain.SkillsAgg;
+using MyFramework.Domain;
 
 namespace InformationManagement.Domain.PersonAgg
 {
@@ -15,7 +16,7 @@ namespace InformationManagement.Domain.PersonAgg
         public bool IsFreelancer { get; private set; }
         public string? Address { get; private set; }
         public DateTime CreationDate { get; private set; }
-
+        public List<SkillModel> Skills { get; private set; }
 
         public PersonModel(string? fullName, string? picturePath, string? email, string? mobile, string? shortDescription,
             bool isFreelancer, string? address, string? description, string? pictureAlt)

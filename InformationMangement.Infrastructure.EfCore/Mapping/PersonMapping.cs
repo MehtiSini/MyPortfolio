@@ -17,6 +17,8 @@ namespace InformationMangement.Infrastructure.EfCore.Mapping
             builder.Property(x => x.PicturePath).HasMaxLength(1000);
             builder.Property(x => x.Address).HasMaxLength(300);
             builder.Property(x => x.Mobile).HasMaxLength(11);
+
+            builder.HasMany(x=>x.Skills).WithOne(x=>x.Person).HasForeignKey(x=>x.PersonId);   
         }
     }
 }

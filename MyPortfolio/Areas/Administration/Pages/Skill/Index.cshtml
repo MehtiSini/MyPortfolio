@@ -1,14 +1,33 @@
 ﻿@page
-@model MyPortfolio.Areas.Administration.Pages.Person.IndexModel
+@model MyPortfolio.Areas.Administration.Pages.Skill.IndexModel
 @{
 }
-
 <div class="row">
     <div class="col-sm-12">
         <h4 class="page-title pull-right">@ViewData["title"]</h4>
         <p class="pull-left">
             <a class="btn btn-success btn-lg" href="#showmodal=@Url.Page("./Index", "Create")">ثبت اطلاعات جدید </a>
         </p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">جستجو در مهارت ها</h3>
+            </div>
+            <div class="panel-body">
+                <form class="form-inline" role="form" method="get">
+                   <div class="form-group">
+                        <label class="sr-only" asp-for="SearchModel.Name"></label>
+                        <input class="form-control" asp-for="SearchModel.Name" placeholder="نام مهارت">
+                    </div>
+                    <button type="submit" class="btn btn-success waves-effect waves-light m-l-10">جستجو</button>
+                    <a class="btn btn-primary waves-effect waves-light m-l-10" asp-page="./Index">مشاهده همه</a>
+                </form>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -25,37 +44,23 @@
                             <thead>
                                 <tr>
                                     <th>#</th>
-                                    <th>عکس</th>
                                     <th>نام</th>
-                                    <th>موبایل</th>
-                                    <th>ایمیل</th>
-                                    <th>آدرس</th>
-                                    <th>ایمیل</th>
+                                    <th>درصد</th>
+                                    <th>تاریخ ایجاد</th>
                                     <th>عملیات</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach (var person in @Model.Persons)
+                                @foreach (var skill in @Model.Skills)
                                 {
                                     <tr>
-                                        <td>@person.Id</td>
-                                        <td>
-                                            <img alt="@person.PictureAlt" class="rounded-circle avatar-md mr-2" src="~/Photos/@person.PicturePath" style="width:50px; height:50px">
-                                        </td>
-                                        <td>@person.FullName</td>
-                                        <td>@person.Mobile</td>
-                                        <td>@person.Address</td>
-                                        <td>@person.Email</td>
-                                        <td>@person.CreationDate</td>
-                                        <td>
-                                            <a class="btn btn-warning pull-right m-rl-5"
-                                           href="#showmodal=@Url.Page("./Index", "Skill", new { PersonId = person.Id})">
-                                                <i class="fa fa-edit"></i> مهارت ها
-                                            </a>
-                                        </td>
+                                        <td>@skill.Id</td>
+                                        <td>@skill.Name</td>
+                                        <td>@skill.Percent %</td>
+                                        <td>@skill.CreationDate</td>
                                         <td>
                                             <a class="btn btn-primary pull-right m-rl-5"
-                                           href="#showmodal=@Url.Page("./Index", "Edit", new { Id = person.Id})">
+                                           href="#showmodal=@Url.Page("./Index", "Edit", new { Id = skill.Id})">
                                                 <i class="fa fa-edit"></i> ویرایش
                                             </a>
                                         </td>
