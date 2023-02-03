@@ -1,0 +1,77 @@
+﻿@using MyQuery.Contracts.Person;
+
+@model PersonQueryViewModel
+
+<div class="foliox_tm_section" id="about">
+    <div class="foliox_tm_about">
+        <div class="container">
+            <div class="foliox_tm_main_title">
+                <span>درباره من</span>
+                <h3>@Model.ShortDescription</h3>
+            </div>
+            <div class="wrapper">
+                <div class="left">
+                    <div class="big_image">
+                        <img class="tilt-effect" src="~/Theme/img/about/1.png" alt="@Model.PictureAlt" />
+                        <div class="small_image">
+                            <div class="in">
+                                <img src="~/Theme/img/thumbs/1-1.jpg" alt="" />
+                                <div class="main tilt-effect" data-img-url="~/Theme/img/about/2.jpg"></div>
+                            </div>
+                        </div>
+                        <span class="badge"><img class="svg" src="~/Theme/img/svg/ribbon.svg" alt="" /></span>
+                        <div class="experience">
+                            <div class="inner">
+                                <h3>12</h3>
+                                <span>سال<br />سابقه کار</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <h3 class="title">درباره من</h3>
+                    <p class="text">@Model.ShortDescription</p>
+                    <div class="list">
+                        <ul>
+                            <li>
+                                <ul class="item">
+                                    <li>
+                                        <span>نام</span>
+                                        <p>@Model.FullName</p>
+                                    </li>
+                                    <li>
+                                        <span>ایمیل</span>
+                                        <p><a href="#"><span class="__cf_email__" data-cfemail="721a171e1e1d32141d1e1b1d0a5c111d1f">@Model.Email</span></a></p>
+                                    </li>
+                                    <li>
+                                        <span>تلفن</span>
+                                        <p class="tm2">@Model.Mobile</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul class="item">
+                                    <li>
+                                        <span>آدرس</span>
+                                        <p>@Model.Address</p>
+                                    </li>
+                                    <li>
+                                        <span>درجه</span>
+                                        <p>استاد</p>
+                                    </li>
+                                    <li>
+                                        <span>فریلنسر</span>
+                                        <p>بله</p>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="foliox_tm_button">
+                        <a href="~/Theme/img/cv/1.jpg" download><span>دریافت CV</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -25,6 +25,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\InformationManagement.Configuration\InformationManagement.Configuration.csproj" />
+    <ProjectReference Include="..\MyQuery\MyQuery.csproj" />
   </ItemGroup>
 
   <ItemGroup>

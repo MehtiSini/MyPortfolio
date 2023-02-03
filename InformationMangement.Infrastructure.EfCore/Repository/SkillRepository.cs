@@ -18,13 +18,14 @@ namespace InformationMangement.Infrastructure.EfCore.Repository
 
         public EditSkill GetDetails(long id)
         {
-            return _personContext.Skill.Select(x => new EditSkill
+           return  _personContext.Skill.Select(x => new EditSkill
             {
-                Id = id,
+                Id = x.Id,
                 Name = x.Name,
                 Percent = x.Percent,
                 PersonId = x.PersonId
             }).FirstOrDefault(x => x.Id == id);
+
         }
 
         public List<SkillViewModel> GetSkills(long personId)

@@ -49,8 +49,6 @@ namespace MyPortfolio.Areas.Administration.Pages.Skill
         }
         public IActionResult OnPostEdit(EditSkill Cmd)
         {
-            var K = 0;
-
             var result = _skillApplication.Edit(Cmd);
 
             return new JsonResult(result);

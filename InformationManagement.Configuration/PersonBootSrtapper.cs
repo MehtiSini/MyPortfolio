@@ -8,6 +8,9 @@ using InformationMangement.Infrastructure.EfCore.DbContextModel;
 using InformationMangement.Infrastructure.EfCore.Repository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using MyQuery.Contracts.Person;
+using MyQuery.Contracts.Skill;
+using MyQuery.Query;
 
 namespace InformationManagement.Configuration
 {
@@ -20,6 +23,9 @@ namespace InformationManagement.Configuration
 
             services.AddTransient<ISkillApplication, SkillApplication>();
             services.AddTransient<ISkillRepository, SkillRepository>();
+
+            services.AddTransient<IPersonQueryModel, PersonQueryModel>();
+            services.AddTransient<ISkillQueryModel, SkillQueryModel>();
 
             services.AddDbContext<PersonContext>(x => x.UseSqlServer(ConnString));
         }

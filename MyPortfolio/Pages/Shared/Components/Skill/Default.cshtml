@@ -1,0 +1,28 @@
+﻿@using MyQuery.Contracts.Skill;
+@model List<SkillQueryViewModel>
+
+
+<div class="foliox_tm_section">
+    <div class="foliox_tm_skills">
+        <div class="container">
+            <div class="foliox_tm_main_title">
+                <span>مهارت ها</span>
+                <h3> در اینجا میتوانید مهارت های من را مشاهده کنید</h3>
+            </div>
+            <div class="list">
+
+                @foreach (var item in Model)
+                {
+                    <div class="left">
+                        <div class="dodo_progress wow fadeInUp" data-wow-duration="1s">
+                            <div class="progress_inner" data-value="@item.Percent">
+                                <span><span class="label">@item.Name</span><span class="number">@item.Percent%</span></span>
+                                <div class="background"><div class="bar"><div class="bar_in"></div></div></div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
