@@ -66,14 +66,15 @@ namespace InformationManagement.Application.Person
             return operation.Succeed();
         }
 
-        public List<PersonViewModel> GetList()
-        {
-            return _personRepository.GetList();
-        }
 
         public EditPerson GetDetails(long id)
         {
             return _personRepository.GetDetails(id);
+        }
+
+        public PersonViewModel GetInformation()
+        {
+            return _personRepository.GetInformation();
         }
     }
 }

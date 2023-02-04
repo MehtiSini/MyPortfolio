@@ -1,4 +1,5 @@
-﻿using InformationManagement.Domain.SkillsAgg;
+﻿using InformationManagement.Contracts.Skill;
+using InformationManagement.Domain.SkillsAgg;
 using MyFramework.Domain;
 
 namespace InformationManagement.Domain.PersonAgg
@@ -35,8 +36,11 @@ namespace InformationManagement.Domain.PersonAgg
         public void Edit(string? fullName, string? picturePath, string? email, string? mobile, string? shortDescription,
             bool isFreelancer, string? address, string? description, string? pictureAlt)
         {
+            if (!string.IsNullOrEmpty(picturePath))
+            {
+                PicturePath = picturePath;
+            }
             FullName = fullName;
-            PicturePath = picturePath;
             Email = email;
             Mobile = mobile;
             ShortDescription = shortDescription;
@@ -46,5 +50,6 @@ namespace InformationManagement.Domain.PersonAgg
             Description = description;
             PictureAlt = pictureAlt;
         }
+
     }
 }

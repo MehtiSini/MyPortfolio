@@ -41,13 +41,12 @@ namespace InformationMangement.Infrastructure.EfCore.Repository
         }
         public List<SkillViewModel> Search(SkillSearchModel SearchModel)
         {
-            var Query = _personContext.Skill.Include(x => x.Person).Select(x => new SkillViewModel
+            var Query = _personContext.Skill.Select(x => new SkillViewModel
             {
                 Id = x.Id,
                 Name = x.Name,
                 Percent = x.Percent,
                 CreationDate = x.CreationDate.ToFarsi(),
-                Person = x.Person.FullName
             });
 
             if (!string.IsNullOrEmpty(SearchModel.Name))

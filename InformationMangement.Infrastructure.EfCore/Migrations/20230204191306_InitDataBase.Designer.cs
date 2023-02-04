@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace InformationMangement.Infrastructure.EfCore.Migrations
 {
     [DbContext(typeof(PersonContext))]
-    [Migration("20230122173502_InitDataBase")]
+    [Migration("20230204191306_InitDataBase")]
     partial class InitDataBase
     {
         /// <inheritdoc />
@@ -74,6 +74,50 @@ namespace InformationMangement.Infrastructure.EfCore.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Person", (string)null);
+                });
+
+            modelBuilder.Entity("InformationManagement.Domain.SkillsAgg.SkillModel", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Percent")
+                        .HasColumnType("int");
+
+                    b.Property<long>("PersonId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PersonId");
+
+                    b.ToTable("Skills", (string)null);
+                });
+
+            modelBuilder.Entity("InformationManagement.Domain.SkillsAgg.SkillModel", b =>
+                {
+                    b.HasOne("InformationManagement.Domain.PersonAgg.PersonModel", "Person")
+                        .WithMany("Skills")
+                        .HasForeignKey("PersonId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Person");
+                });
+
+            modelBuilder.Entity("InformationManagement.Domain.PersonAgg.PersonModel", b =>
+                {
+                    b.Navigation("Skills");
                 });
 #pragma warning restore 612, 618
         }

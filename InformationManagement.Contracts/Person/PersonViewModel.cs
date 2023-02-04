@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using InformationManagement.Contracts.Skill;
+using Microsoft.AspNetCore.Http;
 
 namespace InformationManagement.Contracts.Person
 {
@@ -14,6 +15,7 @@ namespace InformationManagement.Contracts.Person
         public bool IsFreelancer { get; set; }
         public string? Address { get; set; }
         public string? CreationDate { get; set; }
+        public List<SkillViewModel>? Skills { get; set; }
     }
 
 }

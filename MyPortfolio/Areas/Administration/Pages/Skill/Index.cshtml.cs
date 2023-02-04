@@ -26,11 +26,8 @@ namespace MyPortfolio.Areas.Administration.Pages.Skill
         }
         public IActionResult OnGetCreate()
         {
-            var Command = new CreateSkill
-            {
-                People = _personApplication.GetList()
-            };
-
+            var Command = new CreateSkill();
+           
             return Partial("./Create", Command);
         }
         public IActionResult OnPostCreate(CreateSkill Cmd)
@@ -42,8 +39,6 @@ namespace MyPortfolio.Areas.Administration.Pages.Skill
         public IActionResult OnGetEdit(long id)
         {
             var Result = _skillApplication.GetDetails(id);
-
-            Result.People= _personApplication.GetList();
 
             return Partial("./Edit", Result);
         }

@@ -9,7 +9,7 @@ namespace MyPortfolio.Areas.Administration.Pages.Person
     {
         public List<SkillViewModel> Skills;
 
-        public List<PersonViewModel> Persons;
+        public PersonViewModel Command;
 
         private readonly ISkillApplication _skillApplication;
 
@@ -21,30 +21,7 @@ namespace MyPortfolio.Areas.Administration.Pages.Person
         }
         public void OnGet()
         {
-            Persons = _personApplicaction.GetList();
-        }
-
-        public IActionResult OnGetCreate(CreatePerson Cmd)
-        {
-            return Partial("./Create", Cmd);
-        }
-        public IActionResult OnPostCreate(CreatePerson Cmd)
-        {
-            var Operation = _personApplicaction.Create(Cmd);
-
-            return new JsonResult(Operation);
-        }
-        public IActionResult OnGetEdit(long id)
-        {
-            var Result = _personApplicaction.GetDetails(id);
-
-            return Partial("./Edit", Result);
-        }
-        public IActionResult OnPostEdit(EditPerson Cmd)
-        {
-            var Operation = _personApplicaction.Edit(Cmd);
-
-            return new JsonResult(Operation);
+            Command = _personApplicaction.GetInformation();
         }
 
         public IActionResult OnGetSkill(long PersonId)

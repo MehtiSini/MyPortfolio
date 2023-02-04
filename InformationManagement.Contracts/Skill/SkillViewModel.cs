@@ -6,7 +6,6 @@
         public string? Name { get; set; }
         public int Percent { get; set; }
         public string? CreationDate { get; set; }
-        public string? Person { get;  set; }
     }
 
 }

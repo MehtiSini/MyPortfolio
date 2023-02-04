@@ -29,7 +29,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InformationManagement.Confi
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02.PortfolioQuery", "02.PortfolioQuery", "{7BFF6971-5514-4FF6-80CE-553045E20616}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyQuery", "MyQuery\MyQuery.csproj", "{0C85979E-62A8-412E-8056-8B8CBE31275D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyQuery", "MyQuery\MyQuery.csproj", "{0C85979E-62A8-412E-8056-8B8CBE31275D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

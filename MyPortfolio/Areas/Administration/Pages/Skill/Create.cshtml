@@ -31,18 +31,6 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="form-group">
-                    <label asp-for="PersonId" class="control-label">این مهارت برای چه شخصی میباشد؟</label>
-                    <select class="form-control" asp-for="PersonId"
-                            asp-items='new SelectList(Model.People, "Id", "FullName")'>
-                        <option value="0">افراد</option>
-                    </select>
-                    <span asp-validation-for="PersonId" class="error"></span>
-                </div>
-            </div>
-        </div>
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">بستن</button>
