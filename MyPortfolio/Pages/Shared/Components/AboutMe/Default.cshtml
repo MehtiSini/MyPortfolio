@@ -1,18 +1,14 @@
-﻿@using MyQuery.Contracts.Person;
-
-@model PersonQueryViewModel
-
-<div class="foliox_tm_section" id="about">
+﻿<div class="foliox_tm_section" id="about">
     <div class="foliox_tm_about">
         <div class="container">
             <div class="foliox_tm_main_title">
                 <span>درباره من</span>
-                <h3>@Model.ShortDescription</h3>
+                <h3>یک توسعه دهنده خوش ذوق که عاشق کدنویسی است</h3>
             </div>
             <div class="wrapper">
                 <div class="left">
                     <div class="big_image">
-                        <img class="tilt-effect" src="~/Theme/img/about/1.png" alt="@Model.PictureAlt" />
+                        <img class="tilt-effect" src="~/Theme/img/about/1.png" alt="" />
                         <div class="small_image">
                             <div class="in">
                                 <img src="~/Theme/img/thumbs/1-1.jpg" alt="" />
@@ -30,22 +26,32 @@
                 </div>
                 <div class="right">
                     <h3 class="title">درباره من</h3>
-                    <p class="text">@Model.ShortDescription</p>
+                    <p class="text">
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
+                        طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و
+                        برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می
+                        باشد.
+                    </p>
                     <div class="list">
                         <ul>
                             <li>
                                 <ul class="item">
                                     <li>
                                         <span>نام</span>
-                                        <p>@Model.FullName</p>
+                                        <p>محمد راد</p>
                                     </li>
                                     <li>
                                         <span>ایمیل</span>
-                                        <p><a href="#"><span class="__cf_email__" data-cfemail="721a171e1e1d32141d1e1b1d0a5c111d1f">@Model.Email</span></a></p>
+                                        <p>
+                                            <a href="#">
+                                                <span class="__cf_email__"
+                                                      data-cfemail="721a171e1e1d32141d1e1b1d0a5c111d1f">aaaaaaaa@Gmail.com</span>
+                                            </a>
+                                        </p>
                                     </li>
                                     <li>
                                         <span>تلفن</span>
-                                        <p class="tm2">@Model.Mobile</p>
+                                        <p class="tm2">+98 900 000 0000</p>
                                     </li>
                                 </ul>
                             </li>
@@ -53,7 +59,7 @@
                                 <ul class="item">
                                     <li>
                                         <span>آدرس</span>
-                                        <p>@Model.Address</p>
+                                        <p>ایران، تهران</p>
                                     </li>
                                     <li>
                                         <span>درجه</span>
