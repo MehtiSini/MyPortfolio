@@ -1,4 +1,7 @@
-﻿<div class="foliox_tm_section" id="contact">
+﻿@using MyQuery.Contracts.Person;
+@model PersonQueryViewModel
+
+<div class="foliox_tm_section" id="contact">
     <div class="foliox_tm_contact">
         <div class="container">
             <div class="foliox_tm_main_title">
@@ -15,7 +18,7 @@
                                 </div>
                                 <div class="short">
                                     <h3>آدرس</h3>
-                                    <span>ایران، تهران</span>
+                                    <span>@Model.Address</span>
                                 </div>
                             </div>
                         </li>
@@ -29,7 +32,7 @@
                                     <span>
                                         <a href="#">
                                             <span class="__cf_email__"
-                                                  data-cfemail="066e636a6a6946626962692865696b">aaaaaaaa@Gmail.com</span>
+                                                  data-cfemail="066e636a6a6946626962692865696b">@Model.Email</span>
                                         </a>
                                     </span>
                                 </div>
@@ -42,7 +45,7 @@
                                 </div>
                                 <div class="short tm2">
                                     <h3 class="tm3">تلفن</h3>
-                                    <span>+98 900 000 0000</span>
+                                    <span>@Model.Mobile</span>
                                 </div>
                             </div>
                         </li>
@@ -53,7 +56,7 @@
                         <form action="https://marketifythemes.net/" method="post" class="contact_form"
                               id="contact_form" autocomplete="off">
                             <div class="returnmessage"
-                                 data-success="Your message has been received, We will contact you soon."></div>
+                                 data-success="به زودی با شما تماس خواهیم گرفت"></div>
                             <div class="empty_notice"><span>لطفا فیلدهای مورد نیاز را پر کنید</span></div>
                             <div class="input_list">
                                 <ul>

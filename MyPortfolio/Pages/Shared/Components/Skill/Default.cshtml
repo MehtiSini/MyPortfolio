@@ -14,14 +14,18 @@
                 @foreach (var item in Model)
                 {
                     <div class="left">
-                        <div class="dodo_progress wow fadeInUp" data-wow-duration="1s">
+                        <div class=" dodo_progress wow fadeInUp" data-wow-duration="1s">
                             <div class="progress_inner" data-value="@item.Percent">
                                 <span><span class="label">@item.Name</span><span class="number">@item.Percent%</span></span>
-                                <div class="background"><div class="bar"><div class="bar_in"></div></div></div>
+                                <div class="background">
+                                    <div class="bar">
+                                        <div class="bar_in">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <br/>
                 }
             </div>
         </div>

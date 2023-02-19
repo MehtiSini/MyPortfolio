@@ -4,10 +4,10 @@ using MyQuery.Contracts.Person;
 
 namespace MyQuery.Query
 {
-    public class PersonQueryModel : IPersonQueryModel
+    public class PersonQuery : IPersonQuery
     {
         private readonly PersonContext _personContext;
-        public PersonQueryModel(PersonContext personContext)
+        public PersonQuery(PersonContext personContext)
         {
             _personContext = personContext;
         }

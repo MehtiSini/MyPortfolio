@@ -4,7 +4,7 @@ using MyFramework.Domain;
 
 namespace InformationManagement.Domain.PersonAgg
 {
-    public class PersonModel : PersonEntityBase
+    public class PersonModel : EntityBase
     {
         public long Id { get; set; }
         public string? FullName { get; set; }

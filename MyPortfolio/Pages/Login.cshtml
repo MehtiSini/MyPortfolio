@@ -1,0 +1,23 @@
+﻿@page
+@model MyPortfolio.Pages.LoginModel
+@{
+    ViewData["Title"] = "Login | ورود";
+    Layout = "_LoginLayout";
+}
+
+<div class="form-wrap animate_animated animate__bounceIn animate__slow">
+    <div id="next">
+        <input type="submit" value="Sign In >" />
+        <input type="button" value="" id="dmodeBtn" />
+    </div>
+
+    <h3>Sign In Your Website</h3>
+    <form action="#" method="post">
+        <label for="username">Username / Email</label>
+        <input type="text" name="Password" class="user-inp" placeholder="Enter Username Or Email" />
+        <label for="username">Password</label>
+        <input type="text" name="Password" placeholder="Enter Your Password" />
+        <a asp-page="SignUp">Create New Account Now</a>
+        <a href="#">Forgot Password?</a>
+    </form>
+</div>

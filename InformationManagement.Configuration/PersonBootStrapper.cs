@@ -14,7 +14,7 @@ using MyQuery.Query;
 
 namespace InformationManagement.Configuration
 {
-    public class PersonBootSrtapper
+    public class PersonBootStrapper
     {
         public void Configure(IServiceCollection services, string ConnString)
         {
@@ -24,7 +24,7 @@ namespace InformationManagement.Configuration
             services.AddTransient<ISkillApplication, SkillApplication>();
             services.AddTransient<ISkillRepository, SkillRepository>();
 
-            services.AddTransient<IPersonQueryModel, PersonQueryModel>();
+            services.AddTransient<IPersonQuery, PersonQuery>();
             services.AddTransient<ISkillQueryModel, SkillQueryModel>();
 
             services.AddDbContext<PersonContext>(x => x.UseSqlServer(ConnString));

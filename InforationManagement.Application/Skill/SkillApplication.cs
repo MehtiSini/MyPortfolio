@@ -24,7 +24,7 @@ namespace InformationManagement.Application.Skill
                 return operation.Failed(OperationMessage.DuplicateRecord);
             }
 
-            var Skill = new SkillModel(Cmd.Name,Cmd.Percent,Cmd.PersonId);
+            var Skill = new SkillModel(Cmd.Name,Cmd.Percent,1);
 
             _skilLRepository.Create(Skill);
 

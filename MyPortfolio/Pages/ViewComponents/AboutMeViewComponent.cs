@@ -5,8 +5,8 @@ namespace MyPortfolio.Pages.ViewComponents
 {
     public class AboutMeViewComponent : ViewComponent
     {
-        private readonly IPersonQueryModel _Query;
-        public AboutMeViewComponent(IPersonQueryModel query)
+        private readonly IPersonQuery _Query;
+        public AboutMeViewComponent(IPersonQuery query)
         {
             _Query = query;
         }

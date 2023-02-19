@@ -1,6 +1,6 @@
 ﻿namespace MyQuery.Contracts.Person
 {
-    public interface IPersonQueryModel
+    public interface IPersonQuery
     {
         PersonQueryViewModel GetInformation();
     }
