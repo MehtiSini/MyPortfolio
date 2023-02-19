@@ -1,15 +1,17 @@
-﻿namespace AccountManagement.Contracts.AccountAgg
+﻿using MyFramework.Tools;
+using System.ComponentModel.DataAnnotations;
+
+namespace AccountManagement.Contracts.AccountAgg
 {
     public class EditAccount : LoginAccount
     {
-        public long Id { get; set; }
-    }
 
+        [Required(ErrorMessage = ValidationMessage.IsRequiredEng)]
+        public string? FullName { get; set; }
 
-    public class ChangePassword
-    { 
+        [Required(ErrorMessage = ValidationMessage.IsRequiredEng)]
+        public string? Mobile { get; set; }
+
         public long Id { get; set; }
-        public string? Password { get; set; }
-        public string? RePassword { get; set; }
     }
 }

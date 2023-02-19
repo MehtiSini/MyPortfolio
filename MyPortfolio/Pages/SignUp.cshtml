@@ -1,5 +1,5 @@
 ﻿@page
-@model MyPortfolio.Pages.LoginModel
+@model MyPortfolio.Pages.SignUpModel
 @{
     ViewData["Title"] = "SignUp | ثبتنام";
     Layout = "_LoginLayout";
@@ -7,22 +7,34 @@
 
 <div class="form-wrap animate_animated animate__bounceIn animate__slow">
     <div id="next">
-        <input type="submit" value="Sign Up >" />
+        <input type="submit" form="myform" value="SignUp >" />
         <input type="button" value="" id="dmodeBtn" />
     </div>
 
+    @if (Model.SignUpMessage != null)
+    {
+        <p class="alert alert-danger">@Model.SignUpMessage</p>
+    }
+
     <h3>Sign Up For New Account</h3>
-    <form action="#" method="post">
-        <label for="username">FullName</label>
-        <input type="text" name="FullName" class="user-inp" placeholder="Enter your FullName" />
-        <label for="username">Username / Email</label>
-        <input type="text" name="Password" class="user-inp" placeholder="Enter Username Or Email" />
-        <label for="Mobile">Mobile</label>
-        <input type="text" name="Mobile" class="user-inp" placeholder="Enter Your Phone Number" />
-        <label for="Password">Password</label>
-        <input type="text" name="Password" placeholder="Enter Your Password" />
-        <label for="RePassword">RePassword</label>
-        <input type="text" name="RePassword" placeholder="Enter Your Password Again" />
+    <form id="myform" method="post" asp-page-handler="Register">
+        <label asp-for="Command.Username">FullName</label>
+        <input type="text" asp-for="Command.FullName" class="user-inp" placeholder="Enter your FullName" />
+        <span asp-validation-for="Command.FullName" class="error"></span>
+        <label asp-for="Command.Username">Username</label>
+        <input type="text" asp-for="Command.Username" class="user-inp" placeholder="Enter Username Or Email" />
+        <span asp-validation-for="Command.Username" class="error"></span>
+        <label asp-for="Command.Mobile">Mobile</label>
+        <input type="text" asp-for="Command.Mobile" class="user-inp" placeholder="Enter Your Phone Number" />
+        <span asp-validation-for="Command.Mobile" class="error"></span>
+        <label asp-for="Command.Password">Password</label>
+        <input type="password" asp-for="Command.Password" placeholder="Enter Your Password" />
+        <span asp-validation-for="Command.Password" class="error"></span>
+        <label asp-for="Command.RePassword">RePassword</label>
+        <input type="password" asp-for="Command.RePassword" placeholder="Enter Your Password Again" />
+        <span asp-validation-for="Command.RePassword" class="error"></span>
+
         <a asp-page="Login">Login To My Account</a>
     </form>
+
 </div>

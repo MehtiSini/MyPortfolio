@@ -25,6 +25,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AccountManagement.Domain\AccountManagement.Domain.csproj" />
+    <ProjectReference Include="..\InformationMangement.Infrastructure.EfCore\InformationMangement.Infrastructure.EfCore.csproj" />
   </ItemGroup>
 
 </Project>

@@ -6,7 +6,7 @@ namespace AccountManagement.Infrastructure.EfCore.DbContextModel
     public class AccountContext : DbContext
     {
         public DbSet<AccountModel> Account { get; set; }
-        public AccountContext(DbContextOptions options) : base(options)
+        public AccountContext(DbContextOptions<AccountContext> options) : base(options)
         {
         }
 

@@ -7,6 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="Areas\Administration\Pages\Account\ChangePassword.cshtml" />
+    <None Include="Areas\Administration\Pages\Account\Register.cshtml" />
+    <None Include="Areas\Administration\Pages\Account\Edit.cshtml" />
+    <None Include="Areas\Administration\Pages\Account\Index.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions" Version="7.0.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Analyzers" Version="7.0.3" />

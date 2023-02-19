@@ -1,4 +1,9 @@
-﻿<div class="left side-menu">
+﻿@using InformationManagement.Contracts.Person;
+{
+@inject IPersonAppliaction _application
+}
+
+<div class="left side-menu">
     <div class="sidebar-inner slimscrollleft">
         <div class="user-details">
             <div class="pull-right">
@@ -28,15 +33,28 @@
                     <a class="waves-effect"><i class="md md-mail"></i><span> اطلاعات شخصی </span><span class="pull-right"><i class="md md-add"></i></span></a>
                     <ul class="list-unstyled">
                         <li><a asp-page="/Person/Index">مشاهده اطلاعات</a></li>
-                    </ul>
-                    <ul class="list-unstyled">
-                        <li><a asp-page="/Person/Create">افزودن اطلاعات</a></li>
+
+                        @if (_application.GetInformation != null)
+                        {
+                            <li><a asp-page="/Person/Edit">ویرایش اطلاعات</a></li>
+                        }
+                        else
+                        {
+                            <li><a asp-page="/Person/Create">افزودن اطلاعات</a></li>
+                        }
+
                     </ul>
                 </li>
                 <li class="has_sub">
                     <a class="waves-effect"><i class="md md-mail"></i><span> مهارت ها </span><span class="pull-right"><i class="md md-add"></i></span></a>
                     <ul class="list-unstyled">
                         <li><a asp-page="/Skill/Index">لیست مهارت ها</a></li>
+                    </ul>
+                </li>
+                <li class="has_sub">
+                    <a class="waves-effect"><i class="md md-mail"></i><span>  مدیریت ادمین </span><span class="pull-right"><i class="md md-add"></i></span></a>
+                    <ul class="list-unstyled">
+                        <li><a asp-page="/Account/Index">اطلاعات ادمین</a></li>
                     </ul>
                 </li>
             </ul>

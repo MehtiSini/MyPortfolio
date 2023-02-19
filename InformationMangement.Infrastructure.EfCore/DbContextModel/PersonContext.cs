@@ -10,7 +10,7 @@ namespace InformationMangement.Infrastructure.EfCore.DbContextModel
         public DbSet<PersonModel>? Person { get; set; }
         public DbSet<SkillModel>? Skill { get; set; }
 
-        public PersonContext(DbContextOptions options) : base(options)
+        public PersonContext(DbContextOptions<PersonContext> options) : base(options)
         {
 
         }

@@ -11,5 +11,6 @@ namespace AccountManagement.Contracts.AccountAgg
 
         void SignOut();
         EditAccount GetDetails(long id);
+        List<AccountViewModel> GetAccounts();
     }
 }

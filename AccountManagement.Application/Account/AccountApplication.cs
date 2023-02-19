@@ -1,10 +1,8 @@
 ﻿using AccountManagement.Contracts.AccountAgg;
 using AccountManagement.Domain.AccountAgg;
-using Azure;
 using MyFramework.Tools.Authentication;
 using MyFramework.Tools.Authentication.Password;
 using MyFramework.Tools.Operations;
-using System.Reflection;
 
 namespace AccountManagement.Application.Account
 {
@@ -32,7 +30,7 @@ namespace AccountManagement.Application.Account
 
             var Password = _passwordHasher.Hash(cmd.Password);
 
-            var Account = new AccountModel(cmd.Username, Password, cmd.Mobile, cmd.Fullname);
+            var Account = new AccountModel(cmd.Username, Password, cmd.Mobile, cmd.FullName);
 
             _accountRepository.Create(Account);
             _accountRepository.Save();
@@ -62,6 +60,7 @@ namespace AccountManagement.Application.Account
             {
                 Id = AccountId,
                 Fullname = FullName,
+                Username = Cmd.Username,
                 Mobile = Mobile,
             };
 
@@ -69,6 +68,7 @@ namespace AccountManagement.Application.Account
 
             return Operation.Succeed();
         }
+
         public OperationResult Edit(EditAccount Cmd)
         {
             var Operation = new OperationResult();
@@ -118,6 +118,11 @@ namespace AccountManagement.Application.Account
 
             return Operation.Succeed("رمز عبور شما با موفقیت تغییر کرد");
 
+        }
+
+        public List<AccountViewModel> GetAccounts()
+        {
+            return _accountRepository.GetAccounts();
         }
     }
 }
