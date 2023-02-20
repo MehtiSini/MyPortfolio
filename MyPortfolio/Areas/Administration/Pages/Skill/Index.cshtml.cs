@@ -1,5 +1,6 @@
 using InformationManagement.Contracts.Person;
 using InformationManagement.Contracts.Skill;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -7,6 +8,7 @@ using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace MyPortfolio.Areas.Administration.Pages.Skill
 {
+    [Authorize]
     public class IndexModel : PageModel
     {
         public SkillSearchModel SearchModel;

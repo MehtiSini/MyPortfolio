@@ -1,0 +1,15 @@
+﻿@page
+@model MyPortfolio.Pages.AccessDeniedModel
+@{
+    ViewData["Title"] = "AccessDenied | عدم دسترسی";
+    Layout = "_LoginLayout";
+}
+
+<div class="form-wrap animate_animated animate__bounceIn animate__slow">
+   
+    <div>
+        <p class="danger warning">You Do not have access to this page</p>
+        <a asp-page="/Login"> Click to Login</a>
+    </div>
+
+</div>

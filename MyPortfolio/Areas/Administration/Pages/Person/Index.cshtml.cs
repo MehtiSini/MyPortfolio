@@ -1,10 +1,13 @@
 using InformationManagement.Contracts.Person;
 using InformationManagement.Contracts.Skill;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace MyPortfolio.Areas.Administration.Pages.Person
 {
+
+    [Authorize]
     public class IndexModel : PageModel
     {
         public List<SkillViewModel> Skills;

@@ -37,8 +37,8 @@ builder.Services.Configure<CookiePolicyOptions>(options =>
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, o =>
     {
-        o.LoginPath = new PathString("/Account");
-        o.LogoutPath = new PathString("/Account");
+        o.LoginPath = new PathString("/Login");
+        o.LogoutPath = new PathString("/Login");
         o.AccessDeniedPath = new PathString("/AccessDenied");
     });
 

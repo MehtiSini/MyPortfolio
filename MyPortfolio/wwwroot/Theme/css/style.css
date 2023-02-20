@@ -157,6 +157,7 @@ h1 {
 
 h2 {
     font-size: 36px;
+    color: var(--extra-color);
 }
 
 h3 {
@@ -172,8 +173,9 @@ h5 {
 }
 
 h6 {
-    font-size: 16px;
+    font-size: 13px;
 }
+
 
 .foliox_tm_all_wrap {
     width: 100%;
