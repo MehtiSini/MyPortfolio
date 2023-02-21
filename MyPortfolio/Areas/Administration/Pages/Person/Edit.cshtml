@@ -56,6 +56,16 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="form-group no-margin">
+                                <label asp-for="Command.Description" class="control-label">توضیحات</label>
+                                <textarea class="form-control autogrow" asp-for="Command.Description"
+                                          style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 115px;"></textarea>
+                                <span asp-validation-for="Command.Description" class="error"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group no-margin">
                                 <label asp-for="Command.Address" class="control-label">آدرس</label>
                                 <textarea class="form-control autogrow" asp-for="Command.Address"
                                           style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 30px;" ></textarea>

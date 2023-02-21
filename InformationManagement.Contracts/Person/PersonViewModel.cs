@@ -12,6 +12,7 @@ namespace InformationManagement.Contracts.Person
         public string? Email { get; set; }
         public string? Mobile { get; set; }
         public string? ShortDescription { get; set; }
+        public string? Description { get; set; }
         public bool IsFreelancer { get; set; }
         public string? Address { get; set; }
         public string? CreationDate { get; set; }

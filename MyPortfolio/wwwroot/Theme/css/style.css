@@ -176,6 +176,24 @@ h6 {
     font-size: 13px;
 }
 
+.hr_footer_hero {
+    background-color: var(--extra-color);
+    width: 50%;
+    height: 4px;
+    border:1px solid transparent;
+    border-radius: 10px ;
+    margin-bottom:80px;
+}
+
+
+.hr_footer {
+    background-color: var(--extra-color);
+    width: 90%;
+    height: 5px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+}
+
 
 .foliox_tm_all_wrap {
     width: 100%;
@@ -734,7 +752,7 @@ h6 {
     }
 
     .foliox_tm_main_title h3 {
-        font-size: 48px;
+        font-size: 30px;
     }
 
 .foliox_tm_about {
@@ -766,8 +784,8 @@ h6 {
         .foliox_tm_about .big_image img {
             max-width: 425px;
             max-height: 510px;
-            border:10px solid transparent;
-            border-radius:50%;
+            border: 10px solid transparent;
+            border-radius: 50%;
         }
 
     .foliox_tm_about .small_image {
@@ -1008,22 +1026,42 @@ h6 {
 }
 
     .foliox_tm_skills .list {
-        width: 100%;
+        /*width: 100%;*/
         height: auto;
         clear: both;
         display: flex;
         margin-top: 47px;
+        flex-wrap: wrap
     }
 
-    .foliox_tm_skills .left {
-        width: 50%;
-        padding-left: 67px;
-    }
+.foliox_tm_button_Hero {
+    /*width:33%;*/
+    /*height: auto;*/
+    clear: both;
+    float: right;
+    font-family: var(--font-family-extra);
+    color: #fff;
+    display: inline-block;
+    background-color: var(--extra-color);
+    padding: 10px 15px;
+    border-radius: 100px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    margin: 10px;
+    flex-basis: 31.333333%
+}
 
-    .foliox_tm_skills .right {
-        width: 50%;
-        padding-right: 67px;
-    }
+
+.foliox_tm_skills .left {
+    width: 50%;
+    padding-left: 67px;
+}
+
+.foliox_tm_skills .right {
+    width: 50%;
+    padding-right: 67px;
+}
 
 .dodo_progress {
     width: 100%;
@@ -1168,12 +1206,13 @@ h6 {
             list-style-type: none;
             display: flex;
             flex-wrap: wrap;
+            justify-content: center;
         }
 
             .foliox_tm_services .list ul li {
                 margin: 0px 0px 25px 0px;
                 padding-right: 25px;
-                width: 33.3333%;
+                width: 50%;
             }
 
                 .foliox_tm_services .list ul li .list_inner {
@@ -2233,7 +2272,7 @@ h6 {
         width: 100%;
         display: flex;
         margin-top: 80px;
-        margin-bottom: 182px;
+        margin-bottom: 100px;
         position: relative;
     }
 
@@ -3317,7 +3356,7 @@ body {
 #name_logo_mobile {
     color: var(--extra-color);
     font-weight: bold;
-    font-size:20px;
+    font-size: 20px;
 }
 
 imput,

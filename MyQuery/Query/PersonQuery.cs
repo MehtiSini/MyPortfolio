@@ -20,6 +20,7 @@ namespace MyQuery.Query
                 FullName = x.FullName,
                 PictureAlt = x.PictureAlt,
                 ShortDescription = x.ShortDescription,
+                Description=x.Description,
                 PicturePath = x.PicturePath,
                 Address = x.Address,
                 Email = x.Email,

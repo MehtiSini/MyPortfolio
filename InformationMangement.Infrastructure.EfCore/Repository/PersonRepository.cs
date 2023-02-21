@@ -26,6 +26,7 @@ namespace InformationMangement.Infrastructure.EfCore.Repository
                 FullName = x.FullName,
                 PictureAlt = x.PictureAlt,
                 ShortDescription = x.ShortDescription,
+                Description = x.Description,
                 IsFreelancer = x.IsFreelancer,
                 CreationDate = x.CreationDate.ToFarsi(),
                 PicturePath = x.PicturePath,

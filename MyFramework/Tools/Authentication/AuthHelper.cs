@@ -66,7 +66,8 @@ namespace MyFramework.Tools.Authentication
             //Here We can Choose Some Situations For The Tokens (like ExpireDate)
             var authProperties = new AuthenticationProperties
             {
-                ExpiresUtc = DateTimeOffset.UtcNow.AddDays(2)
+                ExpiresUtc = DateTimeOffset.UtcNow.AddHours(12),
+                IsPersistent = true
             };
 
             _contextAccessor.HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,
