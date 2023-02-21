@@ -620,6 +620,15 @@ h6 {
     float: right;
 }
 
+.foliox_tm_button_about {
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: right;
+    text-align:center;
+    margin:15px;
+}
+
     .foliox_tm_button a {
         font-family: var(--font-family-extra);
         color: #fff;
@@ -632,6 +641,16 @@ h6 {
     }
 
         .foliox_tm_button a span {
+            position: relative;
+            z-index: 2;
+            -webkit-transition: all .3s ease;
+            -moz-transition: all .3s ease;
+            -ms-transition: all .3s ease;
+            -o-transition: all .3s ease;
+            transition: all .3s ease;
+        }
+
+        .foliox_tm_button_Hero a span {
             position: relative;
             z-index: 2;
             -webkit-transition: all .3s ease;
@@ -662,6 +681,10 @@ h6 {
         }
 
         .foliox_tm_button a:hover span {
+            color: #000;
+        }
+
+        .foliox_tm_button_Hero a:hover span {
             color: #000;
         }
 
@@ -760,7 +783,7 @@ h6 {
     height: auto;
     clear: both;
     float: right;
-    margin-bottom: 245px;
+    margin-bottom: 100px;
 }
 
     .foliox_tm_about .wrapper {
@@ -772,7 +795,7 @@ h6 {
     }
 
     .foliox_tm_about .left {
-        width: 50%;
+        width: 45%;
         position: relative;
     }
 
@@ -2727,6 +2750,9 @@ input[type=number] {
     }
 
     .foliox_tm_button a {
+        padding: 15px 40px;
+    }
+    .foliox_tm_button_about a {
         padding: 15px 40px;
     }
 

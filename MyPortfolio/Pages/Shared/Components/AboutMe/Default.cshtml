@@ -2,8 +2,8 @@
 @model PersonQueryViewModel
 
 <div class="foliox_tm_section" id="about">
-    <div class="foliox_tm_about">
-        <div class="container">
+    <div class="foliox_tm_about" >
+        <div class="container" >
             <div class="foliox_tm_main_title">
                 <h3 style="color: var(--extra-color)">@Model.ShortDescription</h3>
             </div>
@@ -24,47 +24,11 @@
                     <p class="text">
                       @Model.Description
                     </p>
-                    <div class="list">
-                        <ul>
-                            <li>
-                                <ul class="item">
-                                    <li>
-                                        <span>نام</span>
-                                        <p>@Model.FullName</p>
-                                    </li>
-                                    <li>
-                                        <span>ایمیل</span>
-                                        <p>
-                                            <a href="#">
-                                                <span class="__cf_email__"
-                                                      data-cfemail="721a171e1e1d32141d1e1b1d0a5c111d1f">@Model.Email</span>
-                                            </a>
-                                        </p>
-                                    </li>
-                                    <li>
-                                        <span>تلفن</span>
-                                        <p class="tm2">@Model.Mobile</p>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <ul class="item">
-                                    <li>
-                                        <span>آدرس</span>
-                                        <p>@Model.Address</p>
-                                    </li>
-                                    <li>
-                                        <span>فریلنسر</span>
-                                        <p>بله</p>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="foliox_tm_button">
-                        <a href="~/Photos/Resume.jpg" download><span>دریافت فایل رزومه</span></a>
-                    </div>
+                  
                 </div>
+            </div>
+            <div class="foliox_tm_button" style="text-align:center;margin-top:15px">
+                <a href="~/Photos/Resume.jpg" download><span>دریافت فایل رزومه</span></a>
             </div>
         </div>
     </div>
